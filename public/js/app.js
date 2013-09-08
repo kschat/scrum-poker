@@ -11,8 +11,8 @@
 		settingButtons: null,
 		aboutPage: null,
 
-		standardValues: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100'],
-		tShirtValues: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+		standardValues: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', 'infinity'],
+		tShirtValues: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'infinity'],
 		fibonacciValues: ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '144']
 	};
 
@@ -62,6 +62,7 @@
 		for(var i=0; i<this.settingButtons.length; i++) {
 			this.settingButtons[i].addEventListener('click', (function(app, index) {
 				return function(e) {
+					console.log(this.innerText);
 					switch(this.innerText) {
 						case '5 Standard':
 							app.aboutPage.style.display = 'none';
@@ -81,6 +82,26 @@
 					}
 				};
 			})(this, i));
+		}
+
+		console.log(window.location.hash);
+		switch(window.location.hash) {
+			case '#/about':
+				app.aboutPage.style.display = 'block';
+				break;
+			case '#/standard':
+				app.aboutPage.style.display = 'none';
+				app.setCardValues(app.cards, app.standardValues);
+				break;
+			case '#/tshirt':
+				app.aboutPage.style.display = 'none';
+				app.setCardValues(app.cards, app.tShirtValues);
+				break;
+
+			case '#/fibonacci':
+				app.aboutPage.style.display = 'none';
+				app.setCardValues(app.cards, app.fibonacciValues);
+				break;
 		}
 	};
 

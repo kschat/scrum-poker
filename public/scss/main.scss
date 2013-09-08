@@ -93,7 +93,7 @@ $mainColor: #009999;
     font-size: 80px !important;
   }
 
-  #main-navigation:target {
+  #navigation:target {
     width: 20% !important;
 
     & + .site-wrapper {
@@ -137,7 +137,7 @@ $mainColor: #009999;
     padding-bottom: 18px !important;
   }
 
-  #main-navigation:target {
+  #navigation:target {
     width: 40% !important;
 
     & + .site-wrapper {
@@ -360,13 +360,13 @@ a:active {
   padding-left: 0 4px;
 }
 
-#main-navigation {
+#navigation {
   z-index: 100;
   @include transition(width 0.3s ease);
 
 }
 
-#main-navigation:target {
+#navigation:target {
   width: 80%;
 
   & + .site-wrapper {
