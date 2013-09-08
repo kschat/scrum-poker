@@ -4,7 +4,7 @@
   "author": "kschat",
   "description": "A web app so Kash can finally use scrum poker in sprints",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
