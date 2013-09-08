@@ -1424,7 +1424,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   .brand {
     font-size: 14px !important; } }
 /* portrait phones */
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   section[role="main"] .back a.card {
     font-size: 140px !important; }
 
