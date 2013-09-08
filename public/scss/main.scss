@@ -492,4 +492,11 @@ a.card {
   & h1 {
     font-size: 60px;
   }
+
+  & a,
+  & a:link,
+  & a:visited {
+    color: $mainColor;
+    font-size: 25px;
+  }
 }

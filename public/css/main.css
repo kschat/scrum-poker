@@ -1818,3 +1818,6 @@ a.card {
   opacity: 0.9; }
   .panel h1 {
     font-size: 60px; }
+  .panel a, .panel a:link, .panel a:visited {
+    color: #009999;
+    font-size: 25px; }
