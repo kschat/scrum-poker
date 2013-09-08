@@ -1,0 +1,17 @@
+{
+  "name": "scrum-poker",
+  "version": "0.0.0",
+  "author": "kschat",
+  "description": "A web app so Kash can finally use scrum poker in sprints",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "connect": "~2.8.8",
+    "connect-route": "~0.1.3"
+  }
+}
