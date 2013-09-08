@@ -83,6 +83,10 @@ $mainColor: #009999;
   section[role="main"] {
     width: 1170px;
     margin: 0 auto !important;
+
+    & .back a.card {
+      font-size: 200px !important;
+    }
   }
 
   .site-wrapper {

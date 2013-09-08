@@ -1370,6 +1370,8 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   section[role="main"] {
     width: 1170px;
     margin: 0 auto !important; }
+    section[role="main"] .back a.card {
+      font-size: 200px !important; }
 
   .site-wrapper {
     -webkit-transition: width 0.3s ease !important;

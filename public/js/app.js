@@ -11,8 +11,8 @@
 		settingButtons: null,
 		aboutPage: null,
 
-		standardValues: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', 'infinity'],
-		tShirtValues: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'infinity'],
+		standardValues: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', '&#8734;'],
+		tShirtValues: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '&#8734;'],
 		fibonacciValues: ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '144']
 	};
 
@@ -45,6 +45,7 @@
 		for(var i=0; i<this.cards.length; i++) {
 			this.cards[i].addEventListener('click', (function(app, index) {
 				return function(e) {
+					console.log(this.innerText);
 					e.preventDefault();
 					if(app.container.className === 'flip') {
 						app.container.className = '';
@@ -62,7 +63,6 @@
 		for(var i=0; i<this.settingButtons.length; i++) {
 			this.settingButtons[i].addEventListener('click', (function(app, index) {
 				return function(e) {
-					console.log(this.innerText);
 					switch(this.innerText) {
 						case '5 Standard':
 							app.aboutPage.style.display = 'none';
@@ -84,7 +84,6 @@
 			})(this, i));
 		}
 
-		console.log(window.location.hash);
 		switch(window.location.hash) {
 			case '#/about':
 				app.aboutPage.style.display = 'block';
@@ -148,10 +147,9 @@
 	app.setCardValues = function(cards, values) {
 		for(var i=0; i<cards.length; i++) {
 			cards[i].style.display = typeof values[i] === 'undefined' ? 'none' : 'block';
-			cards[i].innerText = values[i];
+			cards[i].innerHTML = values[i];
 		}
 	};
-
 
 	document.addEventListener('DOMContentLoaded', app.ready.bind(app));
 })();
