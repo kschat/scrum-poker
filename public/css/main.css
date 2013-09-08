@@ -1419,11 +1419,17 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 /* phones */
 @media only screen and (max-width: 767px) {
   section[role="main"] .back a.card {
-    font-size: 100px !important; } }
+    font-size: 100px !important; }
+
+  .brand {
+    font-size: 15px !important; } }
 /* portrait phones */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   section[role="main"] .back a.card {
-    font-size: 140px !important; } }
+    font-size: 140px !important; }
+
+  a.card {
+    font-size: 40px !important; } }
 * {
   margin: 0;
   padding: 0; }
