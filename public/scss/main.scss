@@ -186,7 +186,7 @@ body {
 
 body {
   padding-top: 40px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 a,
@@ -215,7 +215,7 @@ a:active {
   clear: both;
 }
 
-@include row(3);
+@include row(12);
 
 //Create a 12 column grid system
 @include span(12);

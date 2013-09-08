@@ -7,7 +7,12 @@
 		backCard: null,
 		overlay: null,
 		disableOverlay: null,
-		closeButton: null
+		closeButton: null,
+		settingButtons: null,
+
+		standardValues: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100'],
+		tShirtValues: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+		fibonacciValues: ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '144']
 	};
 
 	app.ready = function(e) {
@@ -17,6 +22,10 @@
 		this.overlay = document.getElementsByClassName('overlay')[0];
 		this.disableOverlay = document.getElementsByClassName('disable-overlay')[0];
 		this.closeButton = document.getElementById('closeButton');
+		this.settingButtons = this.getSettingButtons(document.getElementById('settingsNav'));
+
+		//remove the back card
+		this.cards = Array.prototype.slice.call(this.cards, 0, this.cards.length-1);
 
 		this.overlay.addEventListener('click', (function(app) {
 			return function(e) {
@@ -41,8 +50,27 @@
 					}
 					else {
 						app.container.className = 'flip';
-						app.backCard.innerText = index + 1;
+						app.backCard.innerText = this.innerText;
 						app.overlay.style.display = 'block';
+					}
+				};
+			})(this, i));
+		}
+
+		for(var i=0; i<this.settingButtons.length; i++) {
+			this.settingButtons[i].addEventListener('click', (function(app, index) {
+				return function(e) {
+
+					switch(this.innerText) {
+						case '5 Standard':
+							app.setCardValues(app.cards, app.standardValues);
+							break;
+						case 'M T-Shirt':
+							app.setCardValues(app.cards, app.tShirtValues);
+							break;
+						case 'F Fibonacci':
+							app.setCardValues(app.cards, app.fibonacciValues);
+							break;
 					}
 				};
 			})(this, i));
@@ -75,6 +103,27 @@
 			}
 		}
 	};
+
+	app.getSettingButtons = function(node) {
+		var buttons = node.children,
+			matchingButtons = [];
+
+		for(var i=0; i<buttons.length; i++) {
+			if(buttons[i].className === '') {
+				matchingButtons.push(buttons[i].children[0]);
+			}
+		}
+
+		return matchingButtons;
+	};
+
+	app.setCardValues = function(cards, values) {
+		for(var i=0; i<cards.length; i++) {
+			cards[i].style.display = typeof values[i] === 'undefined' ? 'none' : 'block';
+			cards[i].innerText = values[i];
+		}
+	};
+
 
 	document.addEventListener('DOMContentLoaded', app.ready.bind(app));
 })();
