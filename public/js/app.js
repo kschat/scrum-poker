@@ -9,6 +9,7 @@
 		disableOverlay: null,
 		closeButton: null,
 		settingButtons: null,
+		aboutPage: null,
 
 		standardValues: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100'],
 		tShirtValues: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -23,6 +24,7 @@
 		this.disableOverlay = document.getElementsByClassName('disable-overlay')[0];
 		this.closeButton = document.getElementById('closeButton');
 		this.settingButtons = this.getSettingButtons(document.getElementById('settingsNav'));
+		this.aboutPage = document.getElementById('aboutPanel');
 
 		//remove the back card
 		this.cards = Array.prototype.slice.call(this.cards, 0, this.cards.length-1);
@@ -60,16 +62,21 @@
 		for(var i=0; i<this.settingButtons.length; i++) {
 			this.settingButtons[i].addEventListener('click', (function(app, index) {
 				return function(e) {
-
 					switch(this.innerText) {
 						case '5 Standard':
+							app.aboutPage.style.display = 'none';
 							app.setCardValues(app.cards, app.standardValues);
 							break;
 						case 'M T-Shirt':
+							app.aboutPage.style.display = 'none';
 							app.setCardValues(app.cards, app.tShirtValues);
 							break;
 						case 'F Fibonacci':
+							app.aboutPage.style.display = 'none';
 							app.setCardValues(app.cards, app.fibonacciValues);
+							break;
+						case 'About':
+							app.aboutPage.style.display = 'block';
 							break;
 					}
 				};
