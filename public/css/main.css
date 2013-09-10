@@ -1,4 +1,4 @@
-/*
+/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -97,7 +97,7 @@ a [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
@@ -1640,8 +1640,8 @@ a:active {
       display: block;
       height: 100%;
       padding-left: 15px;
-      border-bottom: 1px solid #222222;
-      border-top: 1px solid #444444; }
+      border-bottom: 1px solid #222;
+      border-top: 1px solid #444; }
       .nav li > a:hover, .nav li > a:active {
         background-color: #009999;
         border-bottom: 1px solid #009999;
@@ -1654,7 +1654,7 @@ a:active {
       margin-top: 1px;
       content: '';
       width: 100%;
-      border-top: 1px solid #444444; }
+      border-top: 1px solid #444; }
     .nav li span {
       color: #fff; }
   .nav li.nav-header {
@@ -1667,8 +1667,8 @@ a:active {
     height: 40px; }
     .nav li.nav-close > a:hover, .nav li.nav-close > a:active {
       background-color: #333;
-      border-bottom: 1px solid #222222;
-      border-top: 1px solid #444444; }
+      border-bottom: 1px solid #222;
+      border-top: 1px solid #444; }
 
 .nav-collapse {
   position: fixed;
