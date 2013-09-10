@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/app.js"></script>
+
+		<title>Scrum Poker</title>
+	</head>
+
+	<body>
+		<div id="navigation" class="nav-collapse">
+			<ul id="settingsNav" class="nav">
+				<li class="nav-close"><a id="closeButton" href="#"><i class="icon-remove"></i></a></li>
+				<li class="nav-header"><span>Deck</span></li>
+				<li><a href="#">5 Standard</a></li>
+				<li><a href="#/tshirt">M T-Shirt</a></li>
+				<li><a href="#/fibonacci">F Fibonacci</a></li>
+
+				<li class="nav-header"><span>App</span></li>
+				<li><a href="#/about"><span class="icon-fixed-width icon-info-sign"></span>About</a></li>
+			</ul>
+		</div>
+
+		<div class="site-wrapper">
+			<header class="navbar" role="navigation">
+				<div class="navbar-content">
+					<a class="nav-button" href="#navigation"><i class="icon-reorder icon-large"></i></a>
+					<a class="brand" href="#">Because Kash has an iPhone Scrum Poker</a>
+				</div>
+			</header>
+
+			<section role="main">
+				<div class="disable-overlay"></div>
+				<div class="wrapper">
+					<div class="overlay"></div>
+					<figure class="front">
+						<div class="row row-3">
+							<div class="span-4">
+								<a class="card" href="#">0</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">1/2</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">1</a>
+							</div>
+						</div>
+
+						<div class="row row-3">
+							<div class="span-4">
+								<a class="card" href="#">2</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">3</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">5</a>
+							</div>
+						</div>
+
+						<div class="row row-3">
+							<div class="span-4">
+								<a class="card" href="#">8</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">13</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">20</a>
+							</div>
+						</div>
+
+						<div class="row row-3">
+							<div class="span-4">
+								<a class="card" href="#">40</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">100</a>
+							</div>
+							<div class="span-4">
+								<a class="card" href="#">&infin;</a>
+							</div>
+						</div>
+					</figure>
+
+					<figure class="back">
+						<div class="row row-12">
+							<div class="span-12">
+								<a class="card" href="#">back</a>
+							</div>
+						</div>
+					</figure>
+				</div>
+
+				<div id="aboutPanel" class="panel">
+					<div class="row">
+						<div class="span12">
+							<h1>About</h1>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="span12">
+							<p>
+								<i>Because Kash has an iPhone Scrum Poker</i> was written because Kash has an iPhone...and iPhones
+								have shitty scrum poker apps. You're welcome Kash.<br /><br />
+								Source code can be found <a id="sourceLink" href="https://github.com/kschat/scrum-poker">here</a>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
