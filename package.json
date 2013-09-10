@@ -1,8 +1,14 @@
 {
   "name": "scrum-poker",
+  "main": "index.html",
+  "window": {
+    "title": "Scrum Poker",
+    "toolbar": false,
+    "position": "center"
+  },
   "version": "0.0.1",
   "author": "kschat",
-  "description": "A web app so Kash can finally use scrum poker in sprints",
+  "description": "An app so Kash can finally use scrum poker in sprints",
   "repository": {
     "type": "git",
     "url": "https://github.com/kschat/scrum-poker.git"
