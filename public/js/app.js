@@ -45,7 +45,6 @@
 		for(var i=0; i<this.cards.length; i++) {
 			this.cards[i].addEventListener('click', (function(app, index) {
 				return function(e) {
-					console.log(this.innerText);
 					e.preventDefault();
 					if(app.container.className === 'flip') {
 						app.container.className = '';
